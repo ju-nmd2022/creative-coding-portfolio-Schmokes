@@ -14,7 +14,7 @@ function drawLayers(x, y, size, layers) {
   const variance = size / layers;
 
   for (let i = 0; i < layers; i++) {
-    if (Math.random() > 0.8) {
+    if (Math.random() > 0.6) {
       continue;
     }
 
