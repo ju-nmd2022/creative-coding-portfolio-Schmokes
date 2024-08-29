@@ -6,7 +6,7 @@
   },
 
   {
-    "file": "experiments/randomSquares_01.js",
+    "file": "experiments/randomSquares_02.js",
     "name": "Random Squares v2",
     "description": "These squares are a modified version of the first version of the Random Squares by Gerbert W. Franke."
   },
