@@ -1,7 +1,19 @@
 [
   {
-    "file": "experiments/example.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "file": "experiments/randomSquares_01.js",
+    "name": "Random Squares v1",
+    "description": "I was inspired by Herbert W. Franke and his random Squares. The natrual chaos of different squares made it possible to dig deeper into what is possible with a simple shape. Just starting with simple steps and adding more and more features to the art."
+  },
+
+  {
+    "file": "experiments/randomSquares_01.js",
+    "name": "Random Squares v2",
+    "description": "These squares are a modified version of the first version of the Random Squares by Gerbert W. Franke."
+  },
+
+  {
+    "file": "experiments/randomSquares_05.js",
+    "name": "Random Squares v3",
+    "description": "So far the artwork had been quite boring with just black and white. With a pop of color and a decreased opacity, this reminds me of colored glass windows. I implemented a random function for the color pop."
   }
 ]
