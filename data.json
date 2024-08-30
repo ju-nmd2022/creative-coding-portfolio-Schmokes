@@ -21,5 +21,11 @@
     "file": "experiments/growingCircles_02.js",
     "name": "Increasing Circles",
     "description": "I got inspired by an artwork from Vera Molnar. Instead of using noise, I used map instead to create this satisfying increase of the size of the ellipses."
+  },
+
+  {
+    "file": "experiments/growingCircles_03.js",
+    "name": "Increasing Circles",
+    "description": "I got inspired by an artwork from Vera Molnar. Instead of using noise, I used map instead to create this satisfying increase of the size of the ellipses."
   }
 ]
