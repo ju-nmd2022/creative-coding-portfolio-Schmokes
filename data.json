@@ -8,18 +8,18 @@
   {
     "file": "experiments/randomSquares_02.js",
     "name": "Random Squares v2",
-    "description": "These squares are a modified version of the first version of the Random Squares by Gerbert W. Franke."
+    "description": "These squares are a modified version of the first version of the Random Squares by Gerbert W. Franke. The main different now is that random squares have a decreased opacity than others. This creates more depth into the art."
   },
 
   {
     "file": "experiments/randomSquares_05.js",
     "name": "Random Squares v3",
-    "description": "So far the artwork had been quite boring with just black and white. With a pop of color and a decreased opacity, this reminds me of colored glass windows. I implemented a random function for the color pop."
+    "description": "So far the artwork had been quite boring with just black and white. With a pop of color and a decreased opacity, this reminds me of colored glass windows. I implemented a random function for the color pop and opacity."
   },
 
   {
     "file": "experiments/growingCircles_02.js",
-    "name": "Increasing cicles",
-    "description": "I got inspired by the artwork from Vera Molnar. "
+    "name": "Increasing Circles",
+    "description": "I got inspired by an artwork from Vera Molnar. Instead of using noise, I used map instead to create this satisfying increase of the size of the ellipses."
   }
 ]

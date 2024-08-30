@@ -9,9 +9,8 @@ const numCols = 50;
 function draw() {
   background(30);
   noStroke();
-
   fill(169, 69, 213);
-  //noiseSeed(8);
+  
   for (let y = 0; y < numRows; y++) {
     for (let x = 0; x < numCols; x++) {
       push();
