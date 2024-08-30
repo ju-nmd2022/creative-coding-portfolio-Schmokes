@@ -25,7 +25,13 @@
 
   {
     "file": "experiments/growingCircles_03.js",
-    "name": "Increasing Circles",
-    "description": "I got inspired by an artwork from Vera Molnar. Instead of using noise, I used map instead to create this satisfying increase of the size of the ellipses."
+    "name": "Falling Circles",
+    "description": "The falling circles are a variation of the increasing circles. This shows the difference the movement has on our perception. To create the falling effect I rotated the square."
+  },
+
+  {
+    "file": "experiments/growingCircles_04.js",
+    "name": "Moving Circles",
+    "description": "To create more active movement in this artwork, I decided to add a noise. I kept the position of the big square at the same place, as I liked the inital start and keeping a few aspects of the original drawing by Vera Molnar."
   }
 ]

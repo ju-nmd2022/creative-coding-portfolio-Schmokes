@@ -2,9 +2,12 @@ function setup() {
   createCanvas(600, 600);
 }
 
-const size = 5;
+const size = 6;
+const divider = 10;
 const numRows = 50;
 const numCols = 50;
+
+let counter = 0;
 
 function draw() {
   background(255, 182, 193);
@@ -14,9 +17,9 @@ function draw() {
   for (let y = 0; y < numRows; y++) {
     for (let x = 0; x < numCols; x++) {
       push();
-      translate(420, 180);
-      rotate(PI / 2);
-      const value = map(x, 0, numCols, 2, size * 2) / 2.5;
+      translate(150, 150);
+      //rotate(PI / 2);
+      let value = noise(x / divider, y / divider, counter) * size;
 
       ellipse(size / 2 + x * size, size / 2 + y * size, value);
       pop();
@@ -24,5 +27,5 @@ function draw() {
   }
 
   //will only draw it once
-  noLoop();
+  counter += 0.1;
 }
