@@ -15,5 +15,11 @@
     "file": "experiments/randomSquares_05.js",
     "name": "Random Squares v3",
     "description": "So far the artwork had been quite boring with just black and white. With a pop of color and a decreased opacity, this reminds me of colored glass windows. I implemented a random function for the color pop."
+  },
+
+  {
+    "file": "experiments/growingCircles_02.js",
+    "name": "Increasing cicles",
+    "description": "I got inspired by the artwork from Vera Molnar. "
   }
 ]

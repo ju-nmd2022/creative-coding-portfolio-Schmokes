@@ -15,7 +15,7 @@ function drawLayers(x, y, size, layers) {
 
   for (let i = 0; i < layers; i++) {
     if (Math.random() > 0.6) {
-      continue;
+      continue;   
     }
 
     const s = (size / layers) * i;      
