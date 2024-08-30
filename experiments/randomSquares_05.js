@@ -18,9 +18,9 @@ function draw() {
     let r = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
-    stroke(r, g, b, 50);
-    fill(r, g, b,120);    
-
+    let o = Math.floor(Math.random() * 150);
+    stroke(r, g, b, 0);
+    fill(r, g, b, o);
 
     //*ChatGPT for selective sizes
     let s;
