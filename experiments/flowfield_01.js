@@ -1,6 +1,6 @@
 let cols, rows;
-let scl = 20;  // Scale of each vector in the grid
-let inc = 0.1; // Increment for Perlin noise
+let scl = 10;  // Scale of each vector in the grid
+let inc = 0.4; // Increment for Perlin noise
 let zoff = 0;  // Z offset for Perlin noise (time)
 let particles = [];
 let flowField;
@@ -11,7 +11,7 @@ function setup() {
   rows = floor(height / scl);
   
   flowField = new Array(cols * rows);
-
+ 
   // Create particles
   for (let i = 0; i < 500; i++) {
     particles[i] = new Particle();
