@@ -33,5 +33,11 @@
     "file": "experiments/growingCircles_04.js",
     "name": "Moving Circles",
     "description": "To create more active movement in this artwork, I decided to add a noise. I kept the position of the big square at the same place, as I liked the inital start and keeping a few aspects of the original drawing by Vera Molnar."
+  },
+
+  {
+    "file": "experiments/flowfield_03.js",
+    "name": "Thunder",
+    "description": "I was inspired by an artwork Garrit made. I started to play around with the code and ended up with thunder that reminds me of the northern methologies."
   }
 ]

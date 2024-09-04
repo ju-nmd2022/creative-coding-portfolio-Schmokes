@@ -1,3 +1,5 @@
+const colors = ["227,152,7,255", "57,156,250,255", "26,27,76,255"];
+
 class Agent {
   constructor(x, y, maxSpeed, maxForce) {
     this.position = createVector(x, y);
@@ -16,7 +18,7 @@ class Agent {
     this.applyForce(steer);
   }
 
-  applyForce(force) { 
+  applyForce(force) {
     this.acceleration.add(force);
   }
 
@@ -47,20 +49,24 @@ class Agent {
   }
 
   draw() {
-    
     //!Change this
     push();
-    stroke(50, 90, 130, 50);
+
+    //The next 3 lines of code where conducted with the help of ChatGPT
+    let color = random(colors);
+    let [r, g, b, a] = color.split(',').map(Number);
+    stroke(r, g, b, a);
+
     strokeWeight(2);
-    line(this.lastPosition.x, this.lastPosition.y, this.position.x, this.position.y);
+    line(this.lastPosition.x, this.lastPosition.y, this.position.x, this.position.y );
     pop();
   }
 }
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
-background(0);
-  
+  background(0);
+
   field = generateField();
   generateAgents();
 }
@@ -79,27 +85,26 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 300; i++) {
+  for (let i = 0; i < 250; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
-      //!Change these
-      3,
-      0.8
+      //!Change these 
+      4,
+      0.4
     );
     agents.push(agent);
   }
 }
 
-const fieldSize = 30; 
+const fieldSize = 120;
 const maxCols = Math.ceil(innerWidth / fieldSize);
 const maxRows = Math.ceil(innerHeight / fieldSize);
-const divider = 3;
+const divider = 30;
 let field;
 let agents = [];
 
 function draw() {
-  
   for (let agent of agents) {
     const x = Math.floor(agent.position.x / fieldSize);
     const y = Math.floor(agent.position.y / fieldSize);
