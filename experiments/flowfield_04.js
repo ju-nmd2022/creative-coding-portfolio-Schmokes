@@ -57,7 +57,7 @@ class Agent {
     let [r, g, b, a] = color.split(',').map(Number);
     stroke(r, g, b, a);
 
-    strokeWeight(2);
+    strokeWeight(4);
     line(this.lastPosition.x, this.lastPosition.y, this.position.x, this.position.y );
     pop();
   }
@@ -85,13 +85,13 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 300; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
       //!Change these 
-      4,
-      0.4
+      2,
+      0.8
     );
     agents.push(agent);
   }
