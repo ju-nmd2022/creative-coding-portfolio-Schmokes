@@ -39,5 +39,11 @@
     "file": "experiments/flowfield_03.js",
     "name": "Thunder",
     "description": "I was inspired by an artwork Garrit made. I started to play around with the code and ended up with thunder that reminds me of the northern methologies."
+  },
+
+  {
+    "file": "experiments/flowfield_04.js",
+    "name": "Recreation Artwork",
+    "description": "I found this artwork by Ahmad Moussa and tried to recreate it. It is said that it was created with perlin noise as well, but I tried to recreate it without."
   }
 ]
