@@ -45,5 +45,11 @@
     "file": "experiments/flowfield_04.js",
     "name": "Recreation Artwork",
     "description": "I found this artwork by Ahmad Moussa and tried to recreate it. It is said that it was created with perlin noise as well, but I tried to recreate it without."
+  },
+
+  {
+    "file": "experiments/flowfield_06.js",
+    "name": "Wave",
+    "description": "I was inspired to crate a spinning animation with some guidence."
   }
 ]

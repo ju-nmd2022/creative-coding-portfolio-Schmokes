@@ -16,7 +16,7 @@ class Agent {
     this.applyForce(steer);
   }
 
-  applyForce(force) { 
+  applyForce(force) {
     this.acceleration.add(force);
   }
 
@@ -47,20 +47,24 @@ class Agent {
   }
 
   draw() {
-    
     //!Change this
     push();
-    stroke(50, 90, 130, 50);
+    stroke(50, 90, 140, 60);
     strokeWeight(2);
-    line(this.lastPosition.x, this.lastPosition.y, this.position.x, this.position.y);
+    line(
+      this.lastPosition.x,
+      this.lastPosition.y,
+      this.position.x,
+      this.position.y
+    );
     pop();
   }
 }
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
-background(0);
-  
+  background(0);
+
   field = generateField();
   generateAgents();
 }
@@ -91,7 +95,7 @@ function generateAgents() {
   }
 }
 
-const fieldSize = 30; 
+const fieldSize = 30;
 const maxCols = Math.ceil(innerWidth / fieldSize);
 const maxRows = Math.ceil(innerHeight / fieldSize);
 const divider = 3;
@@ -99,7 +103,6 @@ let field;
 let agents = [];
 
 function draw() {
-  
   for (let agent of agents) {
     const x = Math.floor(agent.position.x / fieldSize);
     const y = Math.floor(agent.position.y / fieldSize);
