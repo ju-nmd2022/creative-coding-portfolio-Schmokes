@@ -1,6 +1,6 @@
 //const colors = ["#D14D72", "#FFABAB", "#FCC8D1", "#FEF2F4"];
-//const colors = ["#FF885B", "#FFE5CF", "#557C56", "#33372C"]; 
-const colors = ["#6482AD", "#7FA1C3", "#E2DAD6", "#F5EDED"]; 
+//const colors = ["#FF885B", "#FFE5CF", "#557C56", "#33372C"];
+const colors = ["#6482AD", "#7FA1C3", "#E2DAD6", "#F5EDED"];
 
 class Agent {
   constructor(x, y, maxSpeed, maxForce) {
@@ -95,8 +95,8 @@ function generateAgents() {
       Math.random() * innerWidth,
       Math.random() * innerHeight,
       //!Change these
-      4,
-      0.1
+      3,
+      0.3
     );
     agents.push(agent);
   }
