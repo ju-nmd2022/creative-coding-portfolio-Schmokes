@@ -43,8 +43,15 @@
 
   {
     "file": "experiments/flowfield_04.js",
-    "name": "Recreation Artwork",
+    "name": "Recreation Artwork v1",
     "description": "I found this artwork by Ahmad Moussa and tried to recreate it. It is said that it was created with perlin noise as well, but I tried to recreate it without."
+  },
+
+
+  {
+    "file": "experiments/flowfield_07.js",
+    "name": "Recreation Artwork v2",
+    "description": "Now I wanted the lines to go in another direction with other colours that represent the upcoming winter."
   },
 
   {
