@@ -47,7 +47,6 @@
     "description": "I found this artwork by Ahmad Moussa and tried to recreate it. It is said that it was created with perlin noise as well, but I tried to recreate it without."
   },
 
-
   {
     "file": "experiments/flowfield_07.js",
     "name": "Recreation Artwork v2",
@@ -57,6 +56,12 @@
   {
     "file": "experiments/flowfield_06.js",
     "name": "Wave",
+    "description": "I was inspired to crate a spinning animation with some guidence."
+  },
+
+  {
+    "file": "experiments/pixelsArt_02.js",
+    "name": "test",
     "description": "I was inspired to crate a spinning animation with some guidence."
   }
 ]
