@@ -24,7 +24,7 @@ class Particle {
     );
 
     //fades out the particles
-    this.alpha -= 4;
+    this.alpha -= 2;
   }
 
   show() {
@@ -45,11 +45,12 @@ function draw() {
   background(30);
 
   //changeing the number -> the amount of particles change
-  for (let i = 0; i < 3; i++) {
-    p = new Particle();
-    particles.push(p);
+  if (frameCount % 3 === 0) {
+    for (let i = 0; i < 3; i++) {
+      p = new Particle();
+      particles.push(p);
+    }
   }
-
   for (let i = 0; i < particles.length; i++) {
     //limits the particles shown, if they faded out, they are removed
     if (particles[i].alpha > 0) {
