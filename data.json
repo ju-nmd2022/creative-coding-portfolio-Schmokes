@@ -63,5 +63,11 @@
     "file": "experiments/pixelsArt_02.js",
     "name": "test",
     "description": "I was inspired to crate a spinning animation with some guidence."
+  },
+
+  {
+    "file": "experiments/pixelsArt_03.js",
+    "name": "test",
+    "description": "I was inspired to crate a spinning animation with some guidence."
   }
 ]
