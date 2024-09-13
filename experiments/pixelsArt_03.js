@@ -1,4 +1,5 @@
 // The next lines of code were adapted from the video: https://www.youtube.com/watch?v=MceZFeV2jhE
+// Variables/lines of this code were changed by me
 particles = [];
 
 function setup() {
@@ -9,12 +10,12 @@ function setup() {
 function draw() {
   background(0, 0, 30);
 
-  rotateX(sin(frameCount / 6) * 360);
-  rotateY(cos(frameCount / 6) * 360);
+  rotateX(sin(frameCount / 3) * 360);
+  rotateY(cos(frameCount / 2) * 360);
 
-  translate(0,0,sin(frameCount) * 100);
+  translate(0, 0, sin(frameCount) * 100);
 
-  directionalLight([255], createVector(0, 0, -1));
+  directionalLight([255], createVector(0, 2, -13));
 
   if (random(1) > 0.97) {
     //random position
@@ -26,9 +27,9 @@ function draw() {
 
     // controlls the amount of spheres
     for (let i = 0; i < 150; i++) {
-      let r = map(sin(frameCount), -1, 1, 0, 255) + random(-50, 50);
-      let g = map(sin(frameCount / 2), -1, 1, 255, 0) + random(-50, 50);
-      let b = map(cos(frameCount / 4), -1, 1, 0, 255) + random(-50, 50);
+      let r = map(sin(frameCount), -1, 1, 0, 255) + random(-70, 70);
+      let g = map(sin(frameCount / 2), -1, 1, 255, 0) + random(-70, 70);
+      let b = map(cos(frameCount / 4), -1, 1, 0, 255) + random(-70, 70);
 
       let c = color(r, g, b);
 
@@ -57,7 +58,7 @@ class Particle {
 
     this.c = c;
     //random size
-    this.w = random(4, 10);
+    this.w = random(2, 10);
   }
   update() {
     this.pos.add(this.vel);

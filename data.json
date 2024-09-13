@@ -62,12 +62,12 @@
   {
     "file": "experiments/pixelsArt_02.js",
     "name": "test",
-    "description": "I was inspired to crate a spinning animation with some guidence."
+    "description": "Since I haven't made anything with particles yet. I followed a simple video creating to create particles moving over the screen. "
   },
 
   {
     "file": "experiments/pixelsArt_03.js",
-    "name": "test",
-    "description": "I was inspired to crate a spinning animation with some guidence."
+    "name": "Spheres",
+    "description": "For the 3rd week I wanted to try around more with particles and then found a video about creating 3D particles. It reminds me of older animation styles."
   }
 ]

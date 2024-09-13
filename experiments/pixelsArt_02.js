@@ -11,7 +11,6 @@ class Particle {
     this.g = map(this.pos.y, 0, height, 0, 255);
     this.b = map(dist(width / 2, height / 2, this.pos.x, this.pos.y, 0, width, 0, 255)); */
 
-    
     this.alpha = 255;
   }
 
@@ -26,10 +25,16 @@ class Particle {
     //fades out the particles
     this.alpha -= 2;
   }
-    
+
   show() {
+    // The next 4 lines of code are form the video: https://www.youtube.com/watch?v=MceZFeV2jhE
+    let r = map(sin(frameCount), -1, 1, 0, 255) + random(-50, 50);
+    let g = map(sin(frameCount / 2), -1, 1, 255, 0) + random(-50, 50);
+    let b = map(cos(frameCount / 4), -1, 1, 0, 255) + random(-50, 50);
+    let c = color(r, g, b);
+
     noStroke();
-    fill(255, this.alpha);
+    fill(c, this.alpha);
     ellipse(this.pos.x, this.pos.y, 10);
   }
 }
