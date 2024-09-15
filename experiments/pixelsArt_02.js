@@ -28,10 +28,15 @@ class Particle {
 
   show() {
     // The next 4 lines of code are form the video: https://www.youtube.com/watch?v=MceZFeV2jhE
-    let r = map(sin(frameCount), -1, 1, 0, 255) + random(-50, 50);
+    /* let r = map(sin(frameCount), -1, 1, 0, 255) + random(-50, 50);
     let g = map(sin(frameCount / 2), -1, 1, 255, 0) + random(-50, 50);
-    let b = map(cos(frameCount / 4), -1, 1, 0, 255) + random(-50, 50);
-    let c = color(r, g, b);
+    let b = map(cos(frameCount / 4), -1, 1, 0, 255) + random(-50, 50); */
+    
+//The next 3 lines of code are used from the video https://www.youtube.com/watch?v=ktPnruyC6cc&list=PLwUlLzAS3RYow0T9ZXB0IomwB-DyBRTfm&index=11
+    let r = map(sin(frameCount), -1, 1, 50, 255);
+    let g = map(sin(frameCount / 7), -1, 1, 50, 255);
+    let b = map(sin(frameCount / 4), -1, 1, 50, 255);
+    let c = color(r, g, b); 
 
     noStroke();
     fill(c, this.alpha);
