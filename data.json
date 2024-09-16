@@ -68,6 +68,12 @@
   {
     "file": "experiments/pixelsArt_03.js",
     "name": "Spheres",
-    "description": "For the 3rd week I wanted to try around more with particles and then found a video about creating 3D particles. It reminds me of older animation styles."
+    "description": "I wanted to try around more with particles and then found a video about creating 3D particles. It reminds me of older animation styles or when the animation is not yet finished. NOTE: It is less laggy in vsc :)"
+  },
+
+  {
+    "file": "experiments/pixelsArt_04.js",
+    "name": "Spheres Box Mix",
+    "description": "I enjoyed greating something with the 3D part of p5.js. I looked more into material, light and more things that can be applied to the objects."
   }
 ]

@@ -10,12 +10,14 @@ function setup() {
 function draw() {
   background(0, 0, 30);
 
-  rotateX(sin(frameCount / 3) * 360);
-  rotateY(cos(frameCount / 2) * 360);
+  ambientLight("magenta");
+
+  rotateX(sin(frameCount / 5) * 360);
+  rotateY(cos(frameCount / 3) * 360);
 
   translate(0, 0, sin(frameCount) * 100);
 
-  directionalLight([255], createVector(0, 2, -13));
+  directionalLight([255], createVector(0, 8, -13));
 
   if (random(1) > 0.97) {
     //random position
@@ -26,10 +28,10 @@ function draw() {
     let pos = createVector(x, y, z);
 
     // controlls the amount of spheres
-    for (let i = 0; i < 100; i++) { 
+    for (let i = 0; i < 150; i++) {
       let r = map(sin(frameCount), -1, 1, 0, 255) + random(-70, 70);
-      let g = map(sin(frameCount / 2), -1, 1, 255, 0) + random(-70, 70);
-      let b = map(cos(frameCount / 4), -1, 1, 0, 255) + random(-70, 70);
+      let g = map(sin(frameCount / 3), -1, 1, 255, 0) + random(-70, 70);
+      let b = map(cos(frameCount / 6), -1, 1, 0, 255) + random(-70, 70);
 
       let c = color(r, g, b);
 
@@ -38,9 +40,18 @@ function draw() {
     }
   }
 
-  for (let i = particles.length - 1; i >= 0; i--) {
+  for (let i = particles.length - 3; i >= 0; i--) {
     //deletes the particles at some point again
-    if (dist(particles[i].pos.x, particles[i].pos.y, particles[i].pos.z, 0, 0, 0) < 500) {
+    if (
+      dist(
+        particles[i].pos.x,
+        particles[i].pos.y,
+        particles[i].pos.z,
+        0,
+        0,
+        0
+      ) < 500
+    ) {
       particles[i].update();
       particles[i].show();
     } else {
@@ -52,9 +63,7 @@ function draw() {
 class Particle {
   constructor(pos, c) {
     this.pos = createVector(pos.x, pos.y, pos.z);
-    this.vel = p5.Vector.random3D()
-      .normalize()
-      .mult(random(4, 6));
+    this.vel = p5.Vector.random3D().normalize().mult(random(4, 6));
 
     this.c = c;
     //random size
@@ -68,8 +77,14 @@ class Particle {
 
     noStroke();
     fill(this.c);
+    shininess(30);
+    specularMaterial(255);
     translate(this.pos.x, this.pos.y, this.pos.z);
-    sphere(this.w);
+    if (random(1) > 0.5) {
+      box(this.w);
+    } else {
+      sphere(this.w);
+    }
 
     pop();
   }
