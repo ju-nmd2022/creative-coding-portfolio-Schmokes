@@ -26,7 +26,7 @@ function draw() {
     let pos = createVector(x, y, z);
 
     // controlls the amount of spheres
-    for (let i = 0; i < 100; i++) { 
+    for (let i = 0; i < 10; i++) { 
       let r = map(sin(frameCount), -1, 1, 0, 255) + random(-70, 70);
       let g = map(sin(frameCount / 2), -1, 1, 255, 0) + random(-70, 70);
       let b = map(cos(frameCount / 4), -1, 1, 0, 255) + random(-70, 70);
