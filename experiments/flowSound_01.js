@@ -104,8 +104,6 @@ let field;
 let agents = [];
 
 function draw() {
-  //blendMode(SCREEN);
-
   for (let agent of agents) {
     const x = Math.floor(agent.position.x / fieldSize);
     const y = Math.floor(agent.position.y / fieldSize);
@@ -122,9 +120,6 @@ function draw() {
 
 
 function mouseDragged() { 
-
-  //updatePixels();
-  //loadPixels();
   if (mouseX >= 0 && mouseX < width && mouseY >= 0 && mouseY < height) {
   let x = mouseX;
   let y = mouseY;
@@ -136,7 +131,17 @@ function mouseDragged() {
   let alphaValue = pixels[index + 3];
 
   console.log(alphaValue);
-}}
+
+  if (alphaValue <= 50) { 
+    //then this sound
+   } else if ( 50 < alphaValue > 150 ) {
+//then this sound
+   } else if (alphaValue > 150){
+//then this sound
+   }
+
+}
+}
  
  
 
