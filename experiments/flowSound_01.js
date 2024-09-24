@@ -22,7 +22,7 @@ class Agent {
 
   update() {
     this.lastPosition = this.position.copy();
-//!Change here
+    //!Change here
     this.velocity.add(this.acceleration);
     this.velocity.limit(this.maxSpeed);
     this.position.add(this.velocity);
@@ -51,12 +51,7 @@ class Agent {
     push();
     stroke(248, 50, 130, 40);
     strokeWeight(1);
-    line(
-      this.lastPosition.x,
-      this.lastPosition.y,
-      this.position.x,
-      this.position.y
-    );
+    line(this.lastPosition.x, this.lastPosition.y, this.position.x, this.position.y);
     pop();
   }
 }
@@ -89,9 +84,9 @@ function generateAgents() {
       Math.random() * innerWidth,
       Math.random() * innerHeight,
       //!Change these
-      2, 
+      2,
       0.3
-     );
+    );
     agents.push(agent);
   }
 }
@@ -112,38 +107,35 @@ function draw() {
     agent.update();
     agent.checkBorders();
     agent.draw();
-
   }
 
   loadPixels();
 }
 
-
-function mouseDragged() { 
+function mouseDragged() {
   if (mouseX >= 0 && mouseX < width && mouseY >= 0 && mouseY < height) {
-  let x = mouseX;
-  let y = mouseY;
+    let x = mouseX;
+    let y = mouseY;
 
-  let d = pixelDensity();  // pixel density can vary depending on the device
-  let index = 4 * ((y * d * width * d) + (x * d));
-  
-  // The array contains RGBA values. So index + 3 gives the alpha (A) value
-  let alphaValue = pixels[index + 3];
+    let d = pixelDensity(); // pixel density can vary depending on the device
+    let index = 4 * (y * d * width * d + x * d);
 
-  console.log(alphaValue);
+    // The array contains RGBA values. So index + 3 gives the alpha (A) value
+    let alphaValue = pixels[index + 3];
 
-  if (alphaValue <= 50) { 
-    //then this sound
-   } else if ( 50 < alphaValue > 150 ) {
-//then this sound
-   } else if (alphaValue > 150){
-//then this sound
-   }
+    console.log(alphaValue);
 
+    synth = new Tone.PolySynth().toDestination();
+
+    if (alphaValue <= 50) {
+      synth.triggerAttackRelease(["C3", "E3"], "4n");
+      //then this sound
+    } else if (50 < alphaValue > 150) {
+      synth.triggerAttackRelease(["D3", "F3"], "4n");
+      //then this sound
+    } else if (alphaValue > 150) {
+      synth.triggerAttackRelease(["E3", "G3"], "4n");
+      //then this sound
+    }
+  }
 }
-}
- 
- 
-
-
- 
