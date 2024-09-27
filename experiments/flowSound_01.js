@@ -128,14 +128,18 @@ function mouseDragged() {
     synth = new Tone.PolySynth().toDestination();
 
     if (alphaValue <= 50) {
-      synth.triggerAttackRelease(["C3", "E3"], "4n");
+      synth.triggerAttackRelease("C4", "8n");
       //then this sound
     } else if (50 < alphaValue > 150) {
-      synth.triggerAttackRelease(["D3", "F3"], "4n");
+      synth.triggerAttackRelease("E4", "8n");
       //then this sound
     } else if (alphaValue > 150) {
-      synth.triggerAttackRelease(["E3", "G3"], "4n");
+      synth.triggerAttackRelease("G4", "8n");
       //then this sound
     }
+  }
+
+  if (!mouseDragged) {
+    
   }
 }
