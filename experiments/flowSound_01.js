@@ -51,7 +51,12 @@ class Agent {
     push();
     stroke(248, 50, 130, 40);
     strokeWeight(1);
-    line(this.lastPosition.x, this.lastPosition.y, this.position.x, this.position.y);
+    line(
+      this.lastPosition.x,
+      this.lastPosition.y,
+      this.position.x,
+      this.position.y
+    );
     pop();
   }
 }
@@ -136,16 +141,12 @@ function mouseDragged() {
     if (alphaValue <= 50) {
       synth.triggerAttackRelease("C4", "8n");
       //then this sound
-    } else if (50 < alphaValue > 150) {
+    } else if (50 < alphaValue > 120) {
       synth.triggerAttackRelease("E4", "8n");
       //then this sound
-    } else if (alphaValue > 150) {
+    } else if ( alphaValue > 120) {
       synth.triggerAttackRelease("G4", "8n");
       //then this sound
-    }
-  }
-
-  if (!mouseDragged) {
-    
+    } 
   }
 }
