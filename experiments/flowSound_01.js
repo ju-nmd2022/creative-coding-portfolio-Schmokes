@@ -138,13 +138,13 @@ function mouseDragged() {
 
     synth = new Tone.PolySynth().toDestination();
 
-    if (5 <alphaValue < 25) {
+    if (40 <alphaValue < 45) {
       synth.triggerAttackRelease("C4", "8n");
       //then this sound
-    } else if (25 < alphaValue > 40) {
+    } else if (45 < alphaValue < 50) {
       synth.triggerAttackRelease("E4", "8n");
       //then this sound
-    } else if ( 41 < alphaValue > 100) {
+    } else if ( 50 < alphaValue < 100) {
       synth.triggerAttackRelease("G4", "8n");
       //then this sound
     } 
